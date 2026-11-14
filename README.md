@@ -1,6 +1,6 @@
 🇬🇧 **English** | 🇷🇺 [Русская версия](README.ru.md)
 
-
+```bash
 
 \# 🪐 Exoplanet Radius Prediction
 
@@ -212,7 +212,7 @@ exoplanet-radius-prediction/
 
 \### 1. Clone the repository
 
-```bash
+
 
 git clone https://github.com/DigitalOcean78/exoplanet-radius-prediction.git
 
@@ -268,37 +268,37 @@ params = joblib.load('artifacts/preprocessing\_params.joblib')
 
 def predict\_planet\_radius(pl\_bmasse=None, st\_rad=None, st\_teff=None, ...):
 
-&#x20;   """
+         """
 
-&#x20;   Predicts exoplanet radius in R⊕.
+         Predicts exoplanet radius in R⊕.
 
-&#x20;   If pl\_bmasse = None — the model "knows" mass is unreliable
+         If pl\_bmasse = None — the model "knows" mass is unreliable
 
-&#x20;   and returns a conservative estimate.
+         and returns a conservative estimate.
 
-&#x20;   """
+         """
 
-&#x20;   # Log transformation
+         # Log transformation
 
-&#x20;   log\_cols = \['pl\_bmasse', 'pl\_orbsmax', 'st\_rad', 'st\_mass', 'sy\_dist', 'sy\_pnum']
+         log\_cols = \['pl\_bmasse', 'pl\_orbsmax', 'st\_rad', 'st\_mass', 'sy\_dist', 'sy\_pnum']
 
-&#x20;   raw = {col: (np.log10(v) if v and v > 0 else np.nan) for col, v in {...}.items()}
+         raw = {col: (np.log10(v) if v and v > 0 else np.nan) for col, v in {...}.items()}
 
-&#x20;   
+   
 
-&#x20;   # Median imputation and standardization
+         # Median imputation and standardization
 
-&#x20;   features = pd.DataFrame(\[raw]).fillna(params\['medians'])
+         features = pd.DataFrame(\[raw]).fillna(params\['medians'])
 
-&#x20;   features\['is\_missing\_mass'] = 1 if pl\_bmasse is None else 0
+         features\['is\_missing\_mass'] = 1 if pl\_bmasse is None else 0
 
-&#x20;   features = features\[params\['columns']]
+         features = features\[params\['columns']]
 
-&#x20;   features\_scaled = (features - params\['train\_mean']) / params\['train\_std']
+         features\_scaled = (features - params\['train\_mean']) / params\['train\_std']
 
-&#x20;   
+ 
 
-&#x20;   return model.predict(features\_scaled)\[0]
+         return model.predict(features\_scaled)\[0]
 
 
 

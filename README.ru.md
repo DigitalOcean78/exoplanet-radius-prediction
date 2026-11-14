@@ -1,5 +1,7 @@
 🇬🇧 [English version](README.md) | 🇷🇺 **Русский**
 
+```bash
+
 \# 🪐 Exoplanet Radius Prediction
 
 
@@ -208,7 +210,7 @@ exoplanet-radius-prediction/
 
 \### 1. Клонировать репозиторий
 
-```bash
+
 
 git clone https://github.com/DigitalOcean78/exoplanet-radius-prediction.git
 
