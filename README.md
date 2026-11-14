@@ -90,17 +90,19 @@ The largest improvement is where things were worst.
 
 ## 🗂 Repository Structure
 
+```text
 exoplanet-radius-prediction/
 ├── data/
-│ └── exoplanets.csv # NASA source data
+│   └── exoplanets.csv              # NASA source data
 ├── artifacts/
-│ ├── model_flag.joblib # Trained model (1.2 KB)
-│ └── preprocessing_params.joblib # Preprocessing parameters (3.4 KB)
+│   ├── model_flag.joblib           # Trained model (1.2 KB)
+│   └── preprocessing_params.joblib # Preprocessing parameters (3.4 KB)
 ├── notebooks/
-│ └── project_exoplanets.ipynb
-├── README.md # English (this file)
-├── README.ru.md # Russian version
+│   └── project_exoplanets.ipynb
+├── README.md                       # English (this file)
+├── README.ru.md                    # Russian version
 └── requirements.txt
+```
 
 ---
 

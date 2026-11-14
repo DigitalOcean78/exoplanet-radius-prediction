@@ -91,17 +91,19 @@ Residual plot показал: до флага модель систематич�
 
 ## 🗂 Структура репозитория
 
+```text
 exoplanet-radius-prediction/
 ├── data/
-│ └── exoplanets.csv # Исходные данные NASA
+│   └── exoplanets.csv              # Исходные данные NASA
 ├── artifacts/
-│ ├── model_flag.joblib # Обученная модель (1.2 KB)
-│ └── preprocessing_params.joblib # Параметры предобработки (3.4 KB)
+│   ├── model_flag.joblib           # Обученная модель (1.2 KB)
+│   └── preprocessing_params.joblib # Параметры предобработки (3.4 KB)
 ├── notebooks/
-│ └── project_exoplanets.ipynb
-├── README.md # Английская версия
-├── README.ru.md # Русская версия (этот файл)
+│   └── project_exoplanets.ipynb
+├── README.md                       # Английская версия
+├── README.ru.md                    # Русская версия (этот файл)
 └── requirements.txt
+```
 
 
 ---
