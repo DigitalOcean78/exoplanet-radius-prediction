@@ -1,4 +1,4 @@
-🇬🇧 \*\*English\*\* | 🇷🇺 \[Русская версия](README.ru.md)
+🇬🇧 **English** | 🇷🇺 [Русская версия](README.ru.md)
 
 
 
